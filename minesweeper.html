@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="stats">
+        <p class="statsItem">Points: <span id="points">0</span></p>
+        <button class="statsItem" id="btnTryAgain">TryAgain</button>
+        <p class="statsItem">Time: <span id="timeDiv">0</span></p>
+        <span class="statsItem" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+       
+    </div>
+    <div id="statForm">
+        <form action="">
+            <h1>You WIN!!</h1>
+            <input type="text" placeholder="Your name">
+            <p>Your Time Was <span>0</span> seconds</p>
+            <p>YOu earned: <span>0</span> points</p>
+            <button>Send</button> <button>Restart</button>
+        </form>
+        
+    </div>
+    <p>flags: <span id="flagsDiv"></span></p>
+    <div id="mySidenav" class="sidenav"> <!-- TODO: SIDEBAR NAV -->
+        <a class="mySideNavItem" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="mySideNavItem" id="easy"><button id="btnEasy">EASY</button></div>
+        <div class="mySideNavItem" id="hard"><button id="btnHard">HARD</button></div>
+    <p>Difficulty: <span id="difficulty">Easy</span></p>
+     </div>
+    <div id="Grid"></div>
+
+    
+    <script src='declarations.js'></script>
+    <script src='main.js'></script>
+   
+    <script>
+     difficulty=EASY;beginGame(difficulty);</script>
+</body>
+</html>
