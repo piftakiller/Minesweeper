@@ -180,11 +180,18 @@ document.getElementById(((x*difficulty.cells)+y)).style.backgroundColor="lightgr
     
 }
 function gameOver(){
+    //statForm.style.visibility="visible";
     alert("GameOver");
     for(let i=0;i<allCells;i++){
         let x=Math.floor(i/difficulty.cells);
         let y=i%difficulty.cells;
-        if(gameArray[x][y].value=="Bomb") document.getElementById(i).innerText=gameArray[x][y].value;
+        if(gameArray[x][y].value=="Bomb") {
+            let img= document.createElement("i");
+            img.classList.add("fa-solid" ,"fa-bomb");
+            document.getElementById(i).appendChild(img);
+            document.getElementById(i).style.backgroundColor="orangered";
+        }
+            
             document.getElementById(i).removeEventListener('click',reveal);
             document.getElementById(i).removeEventListener("contextmenu",flag);
         

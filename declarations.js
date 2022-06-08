@@ -9,6 +9,8 @@ const flagsDiv = document.getElementById("flagsDiv") ;
 const timeDiv = document.getElementById("timeDiv") ;
 const grid = document.getElementById("Grid");
 let  gridItem = document.querySelectorAll("#Grid div");
+const statForm = document.getElementById("statForm");
+statForm.style.visibility="hidden";
 let time;
 let point;
 let timers;
